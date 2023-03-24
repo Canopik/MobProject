@@ -1,46 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity"
-    android:orientation="horizontal"
+    android:background="@color/splash_color"
     android:gravity="center"
-    android:background="@color/splash_color">
+    android:orientation="horizontal"
+    tools:context=".SignUpActivity">
 
-    <ImageView
-        android:id="@+id/imageView3"
+
+    <TextView
+        android:id="@+id/editTextTextEmailAddress"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="26dp"
         android:layout_weight="1"
-        app:srcCompat="@mipmap/splash_icon_foreground" />
+        android:ems="10"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922"
+        tools:ignore="MissingConstraints" />
 
-    <Button
+    <TextView
+        android:id="@+id/editTextTextPassword"
+        android:drawablePadding="10dp"
+        android:textSize="14sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/button_color"
-        android:text="Sign up"
-        tools:ignore="MissingConstraints"
-        android:id="@+id/signup_button"
-        android:onClick="signupClick"/>
+        android:layout_height="26dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:textColorHighlight="@color/black"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/signin_button"
+        android:id="@+id/signup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@color/button_color"
-        android:onClick="onClick"
-        android:text="Sign in"
+        android:onClick="signupClick"
+        android:text="Sign up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signin_button"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        app:srcCompat="@mipmap/splash_icon_foreground" />
+    <Button
+        android:id="@+id/signin_button"
+        android:layout_width="92dp"
+        android:layout_height="53dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/button_color"
+        android:onClick="onClick"
+        android:text="Sign in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        tools:ignore="MissingConstraints" />
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
