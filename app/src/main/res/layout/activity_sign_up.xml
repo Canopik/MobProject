@@ -10,13 +10,21 @@
     android:gravity="center"
     android:background="@color/splash_color">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@mipmap/splash_icon_foreground" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/button_color"
         android:text="Sign up"
         tools:ignore="MissingConstraints"
-        android:id="@+id/signup_button" />
+        android:id="@+id/signup_button"
+        android:onClick="signupClick"/>
 
     <Button
         android:id="@+id/signin_button"
@@ -27,5 +35,12 @@
         android:onClick="onClick"
         android:text="Sign in"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@mipmap/splash_icon_foreground" />
 
 </LinearLayout>
