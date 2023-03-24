@@ -55,13 +55,18 @@
         tools:ignore="MissingConstraints"
         android:layout_centerInParent="true"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
+        android:id="@+id/signin2_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/button_color"
-        android:text="Sign in"
-        android:layout_margin="10dp"
-        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/pass"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_toLeftOf="@+id/checkBox"
-        android:layout_below="@+id/pass"/>
+        android:background="@color/button_color"
+        android:onClick="onClick"
+        android:text="Sign in"
+        tools:ignore="MissingConstraints" />
 </RelativeLayout>

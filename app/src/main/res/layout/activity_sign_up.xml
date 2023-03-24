@@ -15,15 +15,17 @@
         android:layout_height="wrap_content"
         android:background="@color/button_color"
         android:text="Sign up"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:id="@+id/signup_button" />
 
     <Button
+        android:id="@+id/signin_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/button_color"
-        android:text="Sign in"
         android:layout_margin="10dp"
-        tools:ignore="MissingConstraints"
-        android:onClick="onClick"/>
+        android:background="@color/button_color"
+        android:onClick="onClick"
+        android:text="Sign in"
+        tools:ignore="MissingConstraints" />
 
 </LinearLayout>

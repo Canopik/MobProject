@@ -9,11 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="109dp"
-        android:layout_height="107dp"
-        android:foregroundGravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:srcCompat="@mipmap/splash_icon_foreground"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="279dp" />
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

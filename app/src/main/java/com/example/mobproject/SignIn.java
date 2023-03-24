@@ -10,23 +10,39 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 
+
 public class SignIn extends AppCompatActivity {
     private static final String TAG = "MyApplication";
     private EditText email;
-    Button sign_in_text;
+    private EditText pass;
+    private Button signin2_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TextView sign_in_text = (TextView) findViewById(R.id.signin_text);
         setContentView(R.layout.activity_sign_in);
+        EditText signin = (EditText)findViewById(R.id.signin_text);
+        EditText pass = (EditText)findViewById(R.id.pass);
+        Button signin2_button = (Button)findViewById(R.id.signin2_button);
         Intent intent_signup = new Intent(this, SignUpActivity.class);
-        sign_in_text.setOnClickListener(new View.OnClickListener() {
+        signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intent_signup.putExtra("email_name_key", email.getText().toString());
                 startActivity(intent_signup);
-                Log.i(TAG, "To SignUp");
-
+            }
+        });
+        Intent intent_pass = new Intent(this, SignUpActivity.class);
+        pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent_pass.putExtra("pass_key", pass.getText().toString());
+            }
+        });
+        signin2_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signup_intent = new Intent(getApplicationContext(), SignUpActivity.class);
+                startActivity(signup_intent);
             }
         });
     }
